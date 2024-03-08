@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Shark Webs</title>
+        <link rel="stylesheet" href="loading_animation.css">
+    </head>
+    <body>
+        <div id="preloader" class="preloader"></div>
+    
+
+
+    <div class="tradingview-widget-container"> 
+        <div id="tradingview_a93d0"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BTCUSDT/?exchange-BINANCE" rel="noopener" target="_blank"><span class="blue-text">BTCUSDT Chart</span></a>by TradingView</div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+        new TradingView.widget(
+        {
+        "autosize": true,
+        "symbol": "BTCUSDT",
+        "interval": "240",
+        "timezone": "Etc/UTC",
+        "theme": "dark",
+        "style": "1",
+        "locale": "en",
+        "toolbar_bg": "af1f3f6",
+        "enable_publishing": false,
+        "withdateranges": true,
+        "hide_side_toolbar": false,
+        "allow_symbol_change": true,
+        "container_id": "tradingview_a93d0"
+        });
+        </script>
+        </div>
+
+
+        <div class="button-container">
+            <a href="buy.html"><button class="buy-button" onclick="toggleDisplay('buy-display')">Buy</button></a>
+            
+            <a href="sell.html"><button class="sell-button" onclick="toggleDisplay('sell-display')">Sell</button></a>
+            
+        </div>
+    
+        <script>
+            function toggleDisplay(displayClass) {
+                const display = document.querySelector(`.${displayClass}`);
+                display.classList.toggle('visible');
+            }
+        </script>
+
+        <script>
+            window.addEventListener("load", function(){
+                var loader = document.getElementById("preloader");
+                loader.style.animation = "none"; // Pause the animation
+                setTimeout(function(){
+                    loader.style.display = "none"; // Hide the preloader after 1 second
+                }, 300); // 1000 milliseconds = 1 second
+            });
+            </script>
+        
+</body>
+</html>
+
+

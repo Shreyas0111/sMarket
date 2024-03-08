@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order placed</title>
+    <link rel="stylesheet" href="last.css">
+    
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 50px; /* Adjust as needed */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="preloader" class="preloader"></div>
+
+    <div class="container">
+        <h2 class="title">Your order was placed.!</h2>
+        
+        <div class="button-container">
+            <a href="stockmarket.html"><button class="buy-button">Back</button></a>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("load", function(){
+            var loader = document.getElementById("preloader");
+            loader.style.animation = "none"; // Pause the animation
+            setTimeout(function(){
+                loader.style.display = "none"; // Hide the preloader after 1 second
+            }, 1500); // 1000 milliseconds = 1 second
+        });
+    </script>
+</body>
+</html>

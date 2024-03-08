@@ -1,0 +1,68 @@
+@keyframes preload {
+    0% { background-position: center; }
+    100% { background-position: center; }
+}
+
+
+.preloader{
+    background: #000 url(pulse.gif) no-repeat center center;
+    transition: 0.5s;
+    background-size: 5%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    animation: preload 1s infinite;
+}
+
+
+
+.title {
+    position: fixed;
+    font-family: 'Poppins','sans-serif';
+    top: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: #33333300;
+    color: rgb(13, 126, 60);
+    padding: 10px 20px;
+    font-size: 36px;
+    width: fit-content;
+  }
+  
+
+
+
+.container{
+    background: #282929 url(completed.gif) no-repeat center center;
+    
+    background-size: 45%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    
+    ;}
+
+    .button-container {
+       
+        text-align: center;
+        position: relative;
+        margin-bottom: 10px; /* Adjust as needed */
+    }
+
+    .buy-button {
+        border: none;
+        position: absolute; /* Position relative to the container */
+        top:580px;                 /* Stick to the bottom */
+        left: 50%; /* Move to the horizontal center */
+        transform: translateX(-50%);
+        
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: #070707; /* Green */
+        color: white;
+    }

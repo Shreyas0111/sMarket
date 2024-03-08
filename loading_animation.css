@@ -1,0 +1,17 @@
+@keyframes preload {
+    0% { background-position: center; }
+    100% { background-position: center; }
+}
+
+
+.preloader{
+    background: #000 url(infinity.gif) no-repeat center center;
+    transition: 0.5s;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    animation: preload 1s infinite;
+}
+

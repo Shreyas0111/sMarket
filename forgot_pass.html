@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Forgot Password page</title>
+    <link rel="stylesheet" href="forgot.css">     
+    <link rel="stylesheet" href="loading_animation.css">
+    
+    <style>
+    body {
+        
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
+    .mandatory-message {
+            color: red;
+            font-size: 20px;
+            display: none;
+        }
+   
+
+
+
+
+    </style>
+    <script src="https://kit.fontawesome.com/f68bc1aa2e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="preloader" class="preloader"></div>
+
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Reset password !</h1>
+            <form>
+                <div class="input-group">
+                    
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input  type="email" placeholder="Email" required>
+                        <span class="mandatory-message" id="emailMandatory">*</span>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input  type="password" placeholder="Password" required>
+                        <span class="mandatory-message" id="passwordMandatory">*</span>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input  type="password" placeholder="Confirm Password" required>
+                        <span class="mandatory-message" id="passwordMandatory">*</span>
+                    </div>
+
+                   
+                </div>
+                <div class="btn-field">
+                   <a> <button type="button" id="signinBtn">sign in</button></a>
+                </div>
+            </form> 
+        </div>
+    </div>
+
+
+
+
+    
+
+    <script>
+        let signinBtn = document.getElementById("signinBtn");
+        let nameField = document.getElementById("nameField");
+
+        signinBtn.onclick = function(){
+            let inputs = document.querySelectorAll('input[required]');
+            inputs.forEach(input => {
+                let message = input.nextElementSibling;
+                if (input.value.trim() === "") {
+                    message.style.display = "inline";
+                } else {
+                    message.style.display = "none";
+                }
+            });
+            if (!document.querySelector('.mandatory-message[style="display: inline;"]')) {
+                // All mandatory fields are filled
+                // Redirect or perform other action here
+                window.location.href = "stockmarket.html";
+            }
+        }
+    </script>
+
+    <script>
+        window.addEventListener("load", function(){
+            var loader = document.getElementById("preloader");
+            loader.style.animation = "none"; // Pause the animation
+            setTimeout(function(){
+                loader.style.display = "none"; // Hide the preloader after 1 second
+            }, 500); // 1000 milliseconds = 1 second
+        });
+
+
+    </script>
+    
+
+</body>
+</html>
+
+
+
+
