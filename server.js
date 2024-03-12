@@ -9,7 +9,7 @@ const port = 3000;
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'Shishir0111',
+  password: '',
   database: 'stock_market_db'
 });
 
